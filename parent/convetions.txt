@@ -1,0 +1,9 @@
+-----------------------------------------------------------------------------
+System.in.read()
+-----------------------------------------------------------------------------
+lets the app run
+
+- don't use in @Tests (not ideal when running 'All Tests')
+  use Thread.sleep instead
+
+- use in SpringBoot applications if necessary

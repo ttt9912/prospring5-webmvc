@@ -1,0 +1,15 @@
+-----------------------------------------------------------------------------
+Formatting System.out.println() messages
+-----------------------------------------------------------------------------
+- class name -
+    include class name if messages come from many different classes
+
+    System.out.println("[Classname] message")
+
+- aop advice messages -
+    inicate with '>>'
+
+    System.out.println(">> message")
+    or
+    System.out.println("[Classname] >> message")
+
