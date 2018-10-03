@@ -9,9 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>../base-beans</module>
+        <module>../business</module>
         <module>../clients</module>
         <module>../spring-http-invoker</module>
+        <module>../restful-ws</module>
     </modules>
 
     <properties>
