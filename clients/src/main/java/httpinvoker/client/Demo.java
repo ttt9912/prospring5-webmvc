@@ -5,8 +5,9 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /*
- * client does not load the base-beans configurations into it's ApplicationContext
- * Hence, it does not execute DbInitializer or load SingerServiceImpl into ApplicationContext directly
+ * client does not load any business configurations into it's ApplicationContext
+ * Hence, it does not execute DbInitializer or load SingerServiceImpl
+ * into ApplicationContext directly
  *
  * SingerServiceImpl is retrieved and loaded into ApplicationContext
  * from Server (via HTTP Invoker).
