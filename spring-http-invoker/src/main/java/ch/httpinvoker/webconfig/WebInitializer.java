@@ -1,4 +1,4 @@
-package ch.httpinvoker.config;
+package ch.httpinvoker.webconfig;
 
 import ch.basebeans.config.DataConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;

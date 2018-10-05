@@ -1,0 +1,35 @@
+<mapping>
+
+    <!-- maps a List of Singer into a Singers Object-->
+    <class name="ch.rest.serialization.Singers">
+        <field name="singers" type="ch.basebeans.entity.Singer" collection="arraylist">
+            <bind-xml name="singer"/>
+        </field>
+    </class>
+
+    <!-- maps a Singer -->
+    <class name="ch.basebeans.entity.Singer" identity="id">
+        <map-to xml="singer"/>
+
+        <field name="id" type="long">
+            <bind-xml name="id" node="element"/>
+        </field>
+        <field name="firstName" type="string">
+            <bind-xml name="firstName" node="element"/>
+        </field>
+        <field name="lastName" type="string">
+            <bind-xml name="lastName" node="element"/>
+        </field>
+        <field name="birthDate" type="string" handler="dateHandler">
+            <bind-xml name="birthDate" node="element"/>
+        </field>
+        <field name="version" type="integer">
+            <bind-xml name="version" node="element"/>
+        </field>
+    </class>
+
+    <!-- support transformation of Date: custom Castor field handler-->
+    <field-handler name="dateHandler" class="ch.rest.serialization.DateTimeFieldHandler">
+        <param name="date-format" value="yyyy-MM-dd"/>
+    </field-handler>
+</mapping>

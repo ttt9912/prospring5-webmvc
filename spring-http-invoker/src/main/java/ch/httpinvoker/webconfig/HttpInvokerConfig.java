@@ -1,9 +1,8 @@
-package ch.httpinvoker.config;
+package ch.httpinvoker.webconfig;
 
 import ch.basebeans.entity.Singer;
 import ch.basebeans.service.SingerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter;

@@ -1,4 +1,4 @@
-package httpinvoker.client;
+package client;
 
 import ch.basebeans.service.SingerService;
 import org.springframework.context.annotation.Bean;
