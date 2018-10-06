@@ -26,6 +26,7 @@ import java.util.List;
  *  - @Controller
  *  - spring type conversion and formatting system
  *  - JSR-303 validation support
+ *
  */
 @Configuration
 @EnableWebMvc
@@ -43,8 +44,8 @@ public class WebConfig implements WebMvcConfigurer {
     // delares instances of HttpMessageConverter that will be used for media conversion
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        //converters.add(mappingJackson2HttpMessageConverter()); // xml converter
-        converters.add(singerMessageConverter()); // json converter
+        converters.add(mappingJackson2HttpMessageConverter()); // json converter
+        converters.add(singerMessageConverter()); // xml converter
     }
 
     // springs support for the Jackson json libary

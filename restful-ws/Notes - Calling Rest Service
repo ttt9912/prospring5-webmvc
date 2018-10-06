@@ -1,0 +1,34 @@
+-----------------------------------------------------------------------------
+Web browser
+-----------------------------------------------------------------------------
+for GET methods,
+just open the url (http://localhost:9082/restful-ws/singer/listdata)
+
+-----------------------------------------------------------------------------
+Curl
+-----------------------------------------------------------------------------
+- pass the desired media type (xml/json) via header
+
+GET methods:
+    curl http://localhost:9082/restful-ws/singer/listdata
+    curl  -H  "Accept:application/xml" http://localhost:9082/restful-ws/singer/listdata
+
+
+with Python tool (python must be installed):
+    curl  -H  "Accept:application/xml" http://localhost:9082/restful-ws/singer/listdata | python -m json.tool
+
+PUT, POST, DELETE methods:
+    curl -i  -X DELETE http://localhost:9082/restful-ws/singer/1
+
+curl options:
+    -H, --header – customer header to pass to the server
+    -i, --include – include response protocol headers in the output (H/F)
+    -v, --verbose – include request & response headers
+    -X, --request – specify request  COMMAND (GET, PUT, DELETE…)  to use
+
+
+-----------------------------------------------------------------------------
+Tools
+-----------------------------------------------------------------------------
+- Postman
+- SoapUI

@@ -6,3 +6,4 @@ Serialization
 - Castor XML: transform objects into xml
 
 --- JSON Serialization ---
+- Jackson (spring built in support)

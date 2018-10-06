@@ -10,19 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /*
- * - @Controller: marks class as Spring MVC Controller
- *
- * - @RequestMapping(value = "/singer"): this controller handles all URLS
- *                                       under localhost:9092/singer
- *
- * - @ResponseBody: applied to all methods. Instructs that all return values from
- *                  the method should be written to the HTTP response directly, and not
- *                  matched to a view
- *
- * - @PathVariable: Springs type conversion system automatically converts String to Long
- *
- * - @RequestBody: automatically binds the content of the HTTP request body into the
- *                 Singer object. Conversion is done by HttpMessageConverter
+ * Controller is exposed under: http://localhost:9082/restful-ws/singer/
  */
 @Slf4j
 @Controller
