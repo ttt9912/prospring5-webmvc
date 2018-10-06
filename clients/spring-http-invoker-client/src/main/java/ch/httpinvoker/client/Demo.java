@@ -1,11 +1,11 @@
-package client;
+package ch.httpinvoker.client;
 
 import ch.basebeans.service.SingerService;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /*
- * client does not load any business configurations into it's ApplicationContext
+ * ch.httpinvoker.client does not load any business configurations into it's ApplicationContext
  * Hence, it does not execute DbInitializer or load SingerServiceImpl
  * into ApplicationContext directly
  *

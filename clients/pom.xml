@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-http-invoker-client</module>
-        <module>rest-client</module>
+        <module>resttemplate-client</module>
     </modules>
 
     <dependencies>
