@@ -1,0 +1,9 @@
+-----------------------------------------------------------------------------
+Securing a restful ws with spring
+-----------------------------------------------------------------------------
+ 1. add a security filter named springSecurityFilterChain:
+    - in web.xml
+    or
+    - replace filter by extending AbstractSecurityWebApplicationInitializer
+ 2.
+ 3.
