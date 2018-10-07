@@ -3,7 +3,7 @@ package ch.rest.webconfig;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JSR310Module;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -61,7 +61,7 @@ public class WebConfig implements WebMvcConfigurer {
         ObjectMapper objMapper = new ObjectMapper();
         objMapper.enable(SerializationFeature.INDENT_OUTPUT);
         objMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-        objMapper.registerModule(new JSR310Module());
+        objMapper.registerModule(new JavaTimeModule());
         objMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         return objMapper;
     }

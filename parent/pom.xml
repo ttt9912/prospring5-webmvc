@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.ttt</groupId>
-    <artifactId>prospring5-webmvc</artifactId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -19,8 +19,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springframework.version>5.1.0.RELEASE</springframework.version>
         <hibernate.version>5.3.6.Final</hibernate.version>
+        <jackson.version>2.9.7</jackson.version>
     </properties>
 
+    <!-- only common dependencies here -->
     <dependencies>
 
         <!-- spring -->
@@ -52,6 +54,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
             <version>${springframework.version}</version>
         </dependency>
 
@@ -102,6 +109,31 @@
             <groupId>org.hibernate.javax.persistence</groupId>
             <artifactId>hibernate-jpa-2.0-api</artifactId>
             <version>1.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+
+        <!-- castor xml marshaller -->
+        <dependency>
+            <groupId>org.codehaus.castor</groupId>
+            <artifactId>castor-xml</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+
+        <!-- jackson json parser -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <!-- serializing LocalDate with jackson-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
     </dependencies>
 

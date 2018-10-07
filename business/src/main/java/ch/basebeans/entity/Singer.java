@@ -1,6 +1,6 @@
 package ch.basebeans.entity;
 
-import org.springframework.stereotype.Service;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "singer")
+@ToString
 public class Singer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
