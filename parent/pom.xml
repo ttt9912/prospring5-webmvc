@@ -5,14 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.ttt</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>prospring5-webmvc</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>../business</module>
         <module>../clients</module>
-        <module>../spring-http-invoker</module>
-        <module>../restful-ws</module>
+        <module>../webapps</module>
     </modules>
 
     <properties>
@@ -22,7 +21,6 @@
         <jackson.version>2.9.7</jackson.version>
     </properties>
 
-    <!-- only common dependencies here -->
     <dependencies>
 
         <!-- spring -->
