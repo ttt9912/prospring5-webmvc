@@ -4,6 +4,9 @@ Securing a restful ws with spring
  1. add a security filter named springSecurityFilterChain:
     - in web.xml
     or
-    - replace filter by extending AbstractSecurityWebApplicationInitializer
- 2.
- 3.
+    - create class that extends AbstractSecurityWebApplicationInitializer
+
+ 2. add spring configuration class for security to declare who can access
+    the app (SecurityConfig). Define users and roles.
+
+ 3. provide Credentials to client (RestSecuredClientConfig)

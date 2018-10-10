@@ -27,6 +27,7 @@ public class Demo_exchange {
     // -----------------------------------------------------------------------------
     // exchange() - all http methods
     // -----------------------------------------------------------------------------
+
     @Test
     public void exchange() {
         ResponseEntity<Singer> responseEntity = restTemplate.exchange(
@@ -44,6 +45,4 @@ public class Demo_exchange {
         System.out.println("headers: " + headers);
         System.out.println("body: " + body);
     }
-
-
 }

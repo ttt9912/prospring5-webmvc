@@ -4,11 +4,15 @@ import ch.basebeans.entity.Singer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /*
  * ch.rest.client does not load any business configurations into it's ApplicationContext
@@ -22,10 +26,6 @@ public class Demo_get_put_post_delete {
 
     @Autowired
     private RestTemplate restTemplate;
-
-
-    private static final String URL_UPDATE_SINGER = "http://localhost:9082/restful-ws/singer/{id}";
-    private static final String URL_DELETE_SINGER = "http://localhost:9082/restful-ws/singer/{id}";
 
 
     // -----------------------------------------------------------------------------
@@ -58,9 +58,23 @@ public class Demo_get_put_post_delete {
         System.out.println("\n--- all Singers ---");
 
         Singers singers = restTemplate.getForObject(
-                "http://localhost:9082/restful-ws/singer/listdata", Singers.class);
+                "http://localhost:9082/restful-ws/singer/singers", Singers.class);
 
         singers.getSingers().forEach(System.out::println);
+    }
+
+    @Test
+    public void findAll_withList() {
+        System.out.println("\n--- all Singers ---");
+
+        ResponseEntity<List<Singer>> response = restTemplate.exchange(
+                "http://localhost:9082/restful-ws/singer/listdata",
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<Singer>>() {
+                });
+
+        response.getBody().forEach(System.out::println);
     }
 
 
@@ -122,7 +136,7 @@ public class Demo_get_put_post_delete {
     public void delete() {
         System.out.println("\n--- delete Singer by id=2 ---");
 
-        restTemplate.delete(URL_DELETE_SINGER, 2);
+        restTemplate.delete("http://localhost:9082/restful-ws/singer/{id}", 2);
 
         printAllSingers();
     }

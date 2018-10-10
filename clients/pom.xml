@@ -16,6 +16,7 @@
     <modules>
         <module>spring-http-invoker-client</module>
         <module>resttemplate-client</module>
+        <module>resttemplate-security-client</module>
     </modules>
 
     <dependencies>

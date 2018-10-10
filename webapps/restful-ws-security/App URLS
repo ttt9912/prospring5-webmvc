@@ -1,0 +1,8 @@
+# index page (public):
+http://localhost:9080/spring-http-invoker
+
+# Login page (public):
+http://localhost:9084/restful-ws-security/login
+
+# Singer service (secured):
+http://localhost:9084/restful-ws-security/rest/singer/

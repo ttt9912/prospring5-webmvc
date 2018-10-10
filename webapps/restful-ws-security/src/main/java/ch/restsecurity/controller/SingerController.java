@@ -1,8 +1,7 @@
-package ch.rest.controller;
+package ch.restsecurity.controller;
 
 import ch.basebeans.entity.Singer;
 import ch.basebeans.service.SingerService;
-import ch.rest.serialization.Singers;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /*
- * Controller is exposed under: http://localhost:9082/restful-ws/singer/
+ * Controller is exposed under: http://localhost:9084/restful-ws/singer/
  */
 @Slf4j
 @Controller
@@ -27,13 +26,6 @@ public class SingerController {
     @ResponseBody
     public List<Singer> listData() {
         return singerService.findAll();
-    }
-
-    @ResponseStatus(HttpStatus.OK)
-    @RequestMapping(value = "/singers", method = RequestMethod.GET)
-    @ResponseBody
-    public Singers singers() {
-        return new Singers(singerService.findAll());
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
