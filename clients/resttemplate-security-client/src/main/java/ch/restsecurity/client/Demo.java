@@ -9,8 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
 /*
- * TODO: does not work yet!!!
- * /rest/* URLS are not secured!!
+ * TODO: does not work yet!!!   /rest/* URLS are not secured!!
  *
  *
  * Credentials are injected into RestTemplate.

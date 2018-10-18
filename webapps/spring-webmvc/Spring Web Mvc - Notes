@@ -1,0 +1,26 @@
+-----------------------------------------------------------------------------
+WebApplicationContext hierarchy
+-----------------------------------------------------------------------------
+
+- root WebApplicationContext (application level): configuration of
+data source, security, service and persistence
+
+- servlet WebApplicationContext (DispatcherServlet level ): handler mapping,
+view resolving, i18n, validation, type conversion, etc.
+
+- DispatcherServlet: central servlet that receives requests and dispatches
+them to the appropriate controllers
+- There can be any number of DispatcherServlet instances for various purposes
+(e.g. handling ui actions and rest requests). Each DispatcherServlet has
+its own WebApplicationContext configuration (servlet level config)
+
+-----------------------------------------------------------------------------
+Request lifecycle
+-----------------------------------------------------------------------------
+1.) Filter
+2.) Dispatcher Servlet
+3.) Common services
+4.) Handler mapping
+5.) Handler interceptor
+6.) Handler exception resolver
+7.) View resolver
